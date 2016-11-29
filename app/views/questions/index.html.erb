@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
-&nbsp
+
 <h1>Listing Questions</h1>
-<div class="container">
+
 <table>
   <thead>
     <tr>
+      <th>Ques ID </th>
       <th>Ques</th>
       <th>Class</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @questions.each do |question| %>
       <tr>
+        <td><%= question.id %></td>
         <td><%= question.ques %></td>
         <td><%= question.class1 %></td>
         <td><%= link_to 'Show', question %></td>
@@ -27,4 +29,3 @@
 <br>
 
 <%= link_to 'New Question', new_question_path %>
-</div>
