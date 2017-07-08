@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129210735) do
+ActiveRecord::Schema.define(version: 20161129230212) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "ans"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "quesid"
+    t.integer  "question_id"
+    t.integer  "student_id"
   end
 
   create_table "questions", force: :cascade do |t|
